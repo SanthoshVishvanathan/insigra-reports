@@ -1,7 +1,4 @@
--- ==============================================================================
--- INSIGRA REPORTS - USER PROFILE LINKING SCRIPT
--- Run this in Supabase SQL Editor AFTER adding users in Auth > Users
--- ==============================================================================
+=
 
 -- 1. Link alpha@test.com to "Alpha Ltd"
 insert into public.profiles (id, company_name)
@@ -17,7 +14,7 @@ from auth.users
 where email = 'beta@test.com'
 on conflict (id) do update set company_name = 'Beta Ltd';
 
--- 3. Verification Check (Run this to verify mapping)
+-- 3. Verification Check 
 select 
   p.id as profile_user_id,
   u.email,
