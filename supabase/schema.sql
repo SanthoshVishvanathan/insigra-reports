@@ -1,7 +1,3 @@
--- ==============================================================================
--- INSIGRA REPORTS - MULTI-TENANT DATABASE SCHEMA & RLS SETUP
--- Execute this script in the Supabase SQL Editor (https://supabase.com/dashboard)
--- ==============================================================================
 
 -- 1. CLEANUP (OPTIONAL / RESET)
 drop table if exists public.campaign_data cascade;
@@ -73,7 +69,6 @@ insert into public.campaign_data (company_name, channel, leads) values
   ('Beta Ltd', 'TikTok Ads', 160),
   ('Beta Ltd', 'Organic Search', 95);
 
--- ==============================================================================
 -- STEP 3 NOTE:
 -- After creating alpha@test.com and beta@test.com in Supabase Auth > Users,
 -- run the companion seed_users.sql script to link them into public.profiles.
