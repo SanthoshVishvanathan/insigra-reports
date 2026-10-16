@@ -1,4 +1,4 @@
-=
+
 
 -- 1. Link alpha@test.com to "Alpha Ltd"
 insert into public.profiles (id, company_name)
